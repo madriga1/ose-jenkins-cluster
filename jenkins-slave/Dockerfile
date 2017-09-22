@@ -6,6 +6,7 @@ ENV HOME /opt/jenkins-slave
 ENV MAVEN_VERSION 3.3.3
 ENV JAVA_HOME /usr/lib/jvm/java
 
+RUN echo "weeee!"
 RUN subscription-manager attach --auto
 RUN yum install -y git tar zip unzip which java-1.8.0-openjdk-devel && \
     yum clean all && \
