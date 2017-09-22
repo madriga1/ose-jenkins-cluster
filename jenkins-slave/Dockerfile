@@ -7,7 +7,8 @@ ENV MAVEN_VERSION 3.3.3
 ENV JAVA_HOME /usr/lib/jvm/java
 
 RUN echo "weeee!"
-RUN subscription-manager register
+RUN subscription-manager register --username madriga123 --password d8scartes
+
 RUN yum install -y git tar zip unzip which java-1.8.0-openjdk-devel && \
     yum clean all && \
     useradd -u 1001 -r -m -d ${HOME} -s /sbin/nologin -c "Jenkins Slave" jenkins-slave && \
